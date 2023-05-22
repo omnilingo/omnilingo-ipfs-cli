@@ -1,0 +1,38 @@
+{
+  "ab": {
+    "cids": ["Qmc625MarAxTxUNfGN6Vjiaxis8Q7jiZoWZY42V99LqYT1"],
+    "meta": "QmVs2rnhxPhHogrcAbe2KDnrMkhtK6MmddHtTKS1vCKL9N"
+  },
+  "bas": {
+    "cids": ["QmerSNUs7sxcXfjjMxy6n7dAQV764uT7icesVXSgyMayzb"],
+    "meta": "QmXmYCK2kDQRVji9gnhMnmj5L8N7aYwos7KJqCdz6ijBEs"
+  },
+  "br": {
+    "cids": ["QmbKi2d7H5M2e7uLhjivRgKa9389LRx26in7pZxipk4AJF"],
+    "meta": "QmbPrQWSYStRjRC2Z7mbwGotKNQm4V2GQj6uPPnz8cJP2i"
+  },
+  "cv": {
+    "cids": ["QmZ9LETHjLtPw9oAfBwMqP7UqX6yusHAkWaoEWedgb5hF5"],
+    "meta": "QmQAYxZVgc2HdG5T1CjyXyWyyTzcAbeaeEYueCZjYjeuB4"
+  },
+  "fr": {
+    "cids": ["QmYvStsErjgUeP8gz6SMTBEKKrghQaVU7s9CvS2WosxJM5"],
+    "meta": "QmaW6K9zCEPAEVr8gy52LqfYyBoB8YB566iBfgLMRstN6j"
+  },
+  "gn": {
+    "cids": ["QmZjcxbBxHKQ4NyncgommB9hbx4NUdHFirufmsLiSunbie"],
+    "meta": "QmSXWpfY8DuTGxzHButv3XGxe11nCz6aMUzuao5rsjJhzc"
+  },
+  "ha": {
+    "cids": ["QmRwYmEohfWQqempFV1NiWXr2YrQxdXM1ELDnGskUeY9Hz"],
+    "meta": "Qmdtg5u7ef61Hn14qKesYKUi6GxLaXZPpRkFRDYQxYxBUr"
+  },
+  "pt": {
+    "cids": ["QmbWXcHWVdRFh3ZmXEbf4tXTk6nqp8zkaNa4aAxaeQ9VTQ"],
+    "meta": "Qma7vv9EcYWGeDg7jRBqy54za6bS7ZomkiQof9sTp91jRN"
+  },
+  "ug": {
+    "cids": ["QmPDPxxtLVqtZag3n91jeV5ZXCE8kND9yxr9HRGAygxbAT"],
+    "meta": "QmaRH4bKg7TwNw7fnaNaCq5QMqWh6nUZtJATKXLiDKS7xX"
+  }
+}
