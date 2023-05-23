@@ -1,3 +1,4 @@
+#pip install ipfshttpclient==0.8.0a1
 import ipfshttpclient
 
 # /ipfs/QmYP2e5YzecZaBmh1ozjLSaNeDYGLMoVQ3sgsBcsshh79p
@@ -5,15 +6,21 @@ import ipfshttpclient
 available_languages = {}
 
 def run():
-    IPFS_API_URL = 'http://127.0.0.1:8080'
-    IPFS_HASH_PREFIX = '/ipfs/'
-    client = ipfshttpclient.connect()
-    client = ipfshttpclient.connect(IPFS_API_URL)
+    print("Connecting to IPFS...")
     try:
-        response = client.cat(IPFS_HASH_PREFIX+"QmYP2e5YzecZaBmh1ozjLSaNeDYGLMoVQ3sgsBcsshh79p")
+        client = ipfshttpclient.connect()
+        print("Connection successfully established")
+    except Exception as e:
+        print("Could not connect to IPFS:", e)
+        return
+
+    print("Connecting to Omnilingo...")
+    try:
+        response = client.cat("QmYP2e5YzecZaBmh1ozjLSaNeDYGLMoVQ3sgsBcsshh79p")
         print(response)
     except Exception as e:
-        print(e)
+        print("Could not connect to Omnilingo:", e)
+        return
 
 # let the user pick one
 # start giving random tasks
@@ -21,6 +28,9 @@ def run():
 # read users input
 # valid input
 # give an answer
+
+
+# give user a convenient way to upload theirs' data
 
 
 # make a web look to it
