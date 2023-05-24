@@ -4,7 +4,9 @@ import random
 from pydub import AudioSegment
 from pydub.playback import play
 import io
+import subprocess
 
+# subprocess.Popen(["ipfs", "daemon"])
 
 def get_languages(cli) -> dict:
     # /ipfs/QmYP2e5YzecZaBmh1ozjLSaNeDYGLMoVQ3sgsBcsshh79p
@@ -36,13 +38,21 @@ def give_task(cli, tasks) -> dict:
             pass
         else:
             task = {
-                "sentense": list(map(lambda x: x.replace(s[0], '________'), sentence_tokens["tokens"])),
+                "sentence": list(map(lambda x: x.replace(s[0], '________'), sentence_tokens["tokens"])),
                 "answer": s[0]
             }
+            break
     
     # play audio
-    audio = AudioSegment.from_file(io.BytesIO(cli.cat(task_raw["clip_cid"])), format="mp3")
-    play(audio)
+    try:
+        with open('temp.mp3', 'wb') as f:
+            f.write(cli.cat(task_raw["clip_cid"]))
+        with open('temp.mp3', 'rb') as f:
+            data = f.read()
+        audio = AudioSegment.from_file(io.BytesIO(data), format="mp3")
+        play(audio)
+    except:
+        print(task["sentence"])
 
     return task
 
@@ -74,7 +84,9 @@ def run() -> None:
     chosen_lang = input("Enter abbreviation of the language: ")
 # start giving random tasks
     response = json.loads(client.cat("QmYP2e5YzecZaBmh1ozjLSaNeDYGLMoVQ3sgsBcsshh79p"))
+    print("Downloading tasks...")
     tasks = json.loads(client.cat(response[chosen_lang]["cids"][0]))
+    print("Done")
     while True:
         t = give_task(client, tasks)
         # show task with an empty space in it
